@@ -4,18 +4,21 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
+    <>
     <Grid templateAreas={{
       base: `"nav" "main"`,
       lg : `"nav nav" "aside main"`
-    }}>
+    }} w="100vw" h="100vh">
 
-    <GridItem w='100vw' area="nav" > <Navbar/></GridItem>
+    <GridItem  area="nav" > <Navbar/></GridItem>
     <Show above="lg">
-    <GridItem area="aside" bg="green">Aside</GridItem>
+    <GridItem area="aside" >Aside</GridItem>
     </Show>
-    <GridItem area="main" bg="blue">Main</GridItem>
+    <GridItem area="main" >Main</GridItem>
     
     </Grid>
+    
+    </>
   )
 }
 
